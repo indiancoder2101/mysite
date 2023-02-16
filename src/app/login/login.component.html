@@ -1,0 +1,18 @@
+
+<section>
+    <div class="loginPage">
+        <div class="loginHead">
+            <h1 >Log In</h1>
+        </div>
+        <div class="loginForm">
+            <form action="GET" #loginFormSub="ngForm" >
+                <input class="textClass"  type="text" name="FirstName" id="" ngModel placeholder="FirstName" required><br>
+                <input class="textClass"  type="text" name="LastName" id="" ngModel placeholder="LastName" required><br>
+                <input class="textClass"  type="email" name="Email" id="" ngModel placeholder="Email" required><br>
+                <input class="textClass"  type="password" name="password" id="" ngModel placeholder="Password" required><br>
+                <input class="textClass"  type="password" name="password" id="" ngModel placeholder="Confirm Password" required><br>
+                <input class="loginBtn" type="button" value="Submit" (click)="clickMe(loginFormSub.value)">
+            </form>
+        </div>
+    </div>
+</section>

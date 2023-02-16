@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+</head>
+
+<body>
+
+    <section>
+        <div class="heading">
+            <div class="table-head">
+                <div>
+                    <p>S No.</p>
+                </div>
+                <div>
+                    <p>Prodcuct Name</p>
+                </div>
+                <div>
+                    <p>Price</p>
+                </div>
+                <div>
+                    <p>Process</p>
+                </div>
+                <div>
+
+                    <select id="table-List" (change)="getItem($event)">
+
+                        <option value="">All Categories</option>
+                        <option value="Computer">Computer</option>
+                        <option value="Game">Game</option>
+                        <option value="Cloth">Cloth</option>
+                        <option value="Machine">Machine</option>
+                        <option value="Book">Book</option>
+                        <option value="Mobile">Mobile</option>
+                    </select>
+                </div>
+            </div>
+            <div  [ngSwitch]="selectedItem">
+                <div class="content" *ngSwitchDefault="">
+                    <p>Select Category for list Item</p>
+                    <div>
+                        <a href="#">Shop More</a>
+                    </div>
+                </div>
+            <div class="table-head table-item" *ngSwitchCase="'Mobile'">
+                <div >
+                    <p> 1</p>
+                </div>
+                <div>
+                    <p>Iphone 14 Pro</p>
+                </div>
+                <div>
+                    <p>540. 25 $</p>
+                </div>
+                <div class="deliver">
+                    <p>Delivered</p>
+                </div>
+                <div>
+                    <p>Mobile</p>
+                </div>
+            </div>
+            <div class="table-head table-item"  *ngSwitchCase="'Mobile'">
+                <div>
+                    <p> 2</p>
+                </div>
+                <div>
+                    <p>Samsung A4</p>
+                </div>
+                <div>
+                    <p>200.00 $</p>
+                </div>
+                <div class="Pending">
+                    <p>Pending</p>
+                </div>
+                <div>
+                    <p>Mobile</p>
+                </div>
+            </div>
+            <div class="table-head table-item" *ngSwitchCase="'Computer'">
+                <div>
+                    <p> 3</p>
+                </div>
+                <div>
+                    <p>Intel Core i5</p>
+                </div>
+                <div>
+                    <p>59.00 $</p>
+                </div>
+                <div class="deliver">
+                    <p>Delivered</p>
+                </div>
+                <div>
+                    <p>Computer</p>
+                </div>
+            </div>
+            <div class="table-head table-item"  *ngSwitchCase="'Computer'">
+                <div>
+                    <p> 4</p>
+                </div>
+                <div>
+                    <p>HP Pavellion series 15</p>
+                </div>
+                <div>
+                    <p>250.00 $</p>
+                </div>
+                <div class="Pending">
+                    <p>Pending</p>
+                </div>
+                <div>
+                    <p>Computer</p>
+                </div>
+            </div>
+            <div class="table-head table-item"  *ngSwitchCase="'Cloth'">
+                <div>
+                    <p> 5</p>
+                </div>
+                <div>
+                    <p>Denim's jeans </p>
+                </div>
+                <div>
+                    <p>25.00 $</p>
+                </div>
+                <div class="deliver">
+                    <p>Delivered</p>
+                </div>
+                <div>
+                    <p>Cloth</p>
+                </div>
+            </div>
+            <div class="table-head table-item"  *ngSwitchCase="'Book'">
+                <div>
+                    <p> 6</p>
+                </div>
+                <div>
+                    <p>The Super Brain</p>
+                </div>
+                <div>
+                    <p>10.00 $</p>
+                </div>
+                <div class="Pending">
+                    <p>Pending</p>
+                </div>
+                <div>
+                    <p>Book</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <main>
+        <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, itaque.</p>
+        <button id="btn" style="padding: 5px 20px; background: cadetblue;">click me</button>
+    </main>
+    <script>
+
+        $("#btn").click(function(){
+            $("#para").hide();
+        });
+        </script>
+    
+
+</body>
+
+</html>
